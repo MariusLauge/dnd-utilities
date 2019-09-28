@@ -2,9 +2,9 @@ import random, sys
 
 
 def roller(argv):
-    if len(argv) == 1:
+    if len(argv) == 0:
         count = 1
-        dice = 6
+        dice = 20
     elif len(argv) == 2:
         count = int(argv[0])
         dice = int(argv[1])
@@ -15,15 +15,10 @@ def roller(argv):
     for i in range(count):
         results.append(random.randint(1, dice))
 
-    if count == 1:
-        return f'Rolled {count}d{dice}: {results[0]}'
+    # if count == 1:
+    #     return f'Rolled {count}d{dice}: {results[0]}'
 
-    results_formatted = ''
-    for x in results[:-1]:
-        results_formatted += str(x) + ', '
-
-    results_formatted += str(results[-1])
-    return f'Rolled {count}d{dice}: {results_formatted}'
+    return f'Rolled {count}d{dice}: {", ".join(map(str, results))}'
 
 
 if __name__ == '__main__':
