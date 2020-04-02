@@ -1,9 +1,10 @@
 PLAYERS = {
     'saltmarsh': {
+        'Barnabus',
         'Bonito',
         'Bunrig',
         'Lucian',
-        'Rob',
+        'Morris',
         'Urd'
     }
 }
